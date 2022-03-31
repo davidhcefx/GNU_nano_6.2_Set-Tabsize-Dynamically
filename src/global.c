@@ -1205,6 +1205,7 @@ void shortcut_init(void)
 	if (!ISSET(PRESERVE))
 		add_to_sclist(MEXECUTE, "^S", 0, do_spell, 0);
 	add_to_sclist(MEXECUTE, "^T", 0, do_spell, 0);
+	add_to_sclist(MMAIN, "M-4", 0, do_set_tabsize, 0);
 #else
 	add_to_sclist(MMAIN, "^T", 0, do_spell, 0);
 #endif

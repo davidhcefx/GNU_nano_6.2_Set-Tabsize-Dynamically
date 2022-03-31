@@ -2,24 +2,26 @@
 
 [![build](https://github.com/davidhcefx/GNU-nano-6.2_Set-Tabsize-Dynamically/actions/workflows/build.yml/badge.svg)](https://github.com/davidhcefx/GNU-nano-6.2_Set-Tabsize-Dynamically/actions/workflows/build.yml)
 
-Some files use two spaces for indentation (eg. [HTML](https://www.w3schools.com/html/html5_syntax.asp)), while others use four (eg. [Python](https://peps.python.org/pep-0008/#indentation)). In the middle of editing a file, I always wish I could change the tab width without reopening the file (which would result in loss of history). This patch adds that functionality!
+Some files use two spaces for indentation (eg. [HTML](https://www.w3schools.com/html/html5_syntax.asp)), while others use four (eg. [Python](https://peps.python.org/pep-0008/#indentation)). In the middle of editing a file, I always wish I could change the tab width without reopening the file (which would result in history loss). This patch achieves our goal!
 
+## Usage
 
-### New rcfile option:
-```
-settabsize
-    Prompts for a new tabsize to be set.
-```
-Example usage:
+For example, bind `M-4` to `settabsize` in your rcfile:
+
 ```nanorc
-bind M-4 settabsize
+bind M-4 settabsize main
 ```
+
+then you can change tabsize on the fly\!
+
+<img src="demo.gif" alt=" demo set to different tab sizes" width=80%>
+
 
 ## How to compile
 
 *Please refer to [README.GIT](/README.GIT) for more details.*
 
-1. Install the dependencies: `apt install autoconf automake autopoint gcc gettext git groff make pkg-co>
+1. Install the dependencies: `apt install autoconf automake autopoint gcc gettext git groff make pkg-config texinfo libncurses5-dev`
 
 2. Run `./autogen.sh`.
 
