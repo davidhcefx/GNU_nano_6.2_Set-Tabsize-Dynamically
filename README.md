@@ -2,7 +2,7 @@
 
 [![build](https://github.com/davidhcefx/GNU-nano-6.2_Set-Tabsize-Dynamically/actions/workflows/build.yml/badge.svg)](https://github.com/davidhcefx/GNU-nano-6.2_Set-Tabsize-Dynamically/actions/workflows/build.yml)
 
-Some files use two spaces for indentation (eg. [HTML](https://www.w3schools.com/html/html5_syntax.asp)), while others use four (eg. [Python](https://peps.python.org/pep-0008/#indentation)). In the middle of editing a file, I always wish I could change the tab width without reopening the file (which would result in history loss). This patch achieves our goal!
+Some files use *two spaces* for indentation (eg. [HTML](https://www.w3schools.com/html/html5_syntax.asp)), while others use *four* (eg. [Python](https://peps.python.org/pep-0008/#indentation)). In the middle of editing a file, I always wish I could change the **tab width** without reopening the file (= loss of history). This patch achieves our goal!
 
 ## Usage
 
