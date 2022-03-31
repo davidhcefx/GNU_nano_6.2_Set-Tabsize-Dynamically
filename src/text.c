@@ -58,6 +58,28 @@ void do_mark(void)
 		refresh_needed = TRUE;
 	}
 }
+
+/* Prompt user to set the new tabsize. We use the spell menu because
+ * it has no functions. */
+void do_set_tabsize(void)
+{
+	ssize_t new_tabsize = -1;
+	int response = do_prompt(MSPELL, "", NULL, edit_refresh, "New tabsize");
+
+	/* Cancel if no answer provided. */
+	if (response != 0) {
+		statusbar(_("Cancelled"));
+		return;
+	}
+
+	if (!parse_num(answer, &new_tabsize) || new_tabsize <= 0) {
+		statusline(AHEM, _("Requested tab size \"%s\" is invalid"), answer);
+		return;
+	}
+
+	tabsize = new_tabsize;
+	statusline(REMARK, _("Tabsize set to %d"), tabsize);
+}
 #endif
 
 /* Insert a tab.  Or, if --tabstospaces is in effect, insert the number

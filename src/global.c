@@ -656,6 +656,7 @@ void shortcut_init(void)
 	const char *prepend_gist = N_("Toggle prepending");
 	const char *backup_gist = N_("Toggle backing up of the original file");
 	const char *execute_gist = N_("Execute a function or an external command");
+	const char *settabsize_gist = N_("Set new tabsize");
 	const char *pipe_gist =
 		N_("Pipe the current buffer (or marked region) to the command");
 	const char *convert_gist = N_("Do not convert from DOS/Mac format");
@@ -1075,6 +1076,9 @@ void shortcut_init(void)
 #ifdef ENABLE_COLOR
 	add_to_funcs(do_formatter, MEXECUTE,
 			N_("Formatter"), WITHORSANS(formatter_gist), BLANKAFTER, NOVIEW);
+
+	add_to_funcs(do_set_tabsize, MMAIN,
+			N_("Set Tabsize"), WITHORSANS(settabsize_gist), TOGETHER, NOVIEW);
 #endif
 
 #ifdef ENABLE_HELP

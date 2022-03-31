@@ -476,6 +476,7 @@ void to_next_anchor(void);
 /* Most functions in text.c. */
 #ifndef NANO_TINY
 void do_mark(void);
+void do_set_tabsize(void);
 #endif
 void do_tab(void);
 #ifndef NANO_TINY

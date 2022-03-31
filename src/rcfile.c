@@ -410,6 +410,8 @@ keystruct *strtosc(const char *input)
 		s->func = flip_replace;
 	else if (!strcmp(input, "flipgoto"))
 		s->func = flip_goto;
+	else if (!strcmp(input, "settabsize"))
+		s->func = do_set_tabsize;
 #ifdef ENABLE_HISTORIES
 	else if (!strcmp(input, "older"))
 		s->func = get_older_item;
