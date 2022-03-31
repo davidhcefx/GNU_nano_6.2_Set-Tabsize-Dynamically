@@ -1,0 +1,21 @@
+name: build
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup and configure
+      run: |
+        sudo apt-get install -y autoconf automake autopoint gcc gettext git groff make pkg-config texinfo libncurses5-dev
+        ./autogen.sh
+        ./configure
+
+    - name: Build
+      run: make -j
+
+    - name: Check
+      run: make check
