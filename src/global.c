@@ -656,10 +656,10 @@ void shortcut_init(void)
 	const char *prepend_gist = N_("Toggle prepending");
 	const char *backup_gist = N_("Toggle backing up of the original file");
 	const char *execute_gist = N_("Execute a function or an external command");
-	const char *settabsize_gist = N_("Set new tabsize");
 	const char *pipe_gist =
 		N_("Pipe the current buffer (or marked region) to the command");
 	const char *convert_gist = N_("Do not convert from DOS/Mac format");
+	const char *settabsize_gist = N_("Set new tabsize");
 #endif
 #ifdef ENABLE_MULTIBUFFER
 	const char *newbuffer_gist = N_("Toggle the use of a new buffer");
